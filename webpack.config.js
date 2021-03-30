@@ -12,6 +12,7 @@ module.exports = {
     open: true,
     host: "localhost",
   },
+  devtool: "inline-source-map",
   plugins: [
     new HtmlWebpackPlugin({
       template: "./templates/index.html",
@@ -45,4 +46,7 @@ module.exports = {
       // Learn more about loaders from https://webpack.js.org/loaders/
     ],
   },
+  resolve: {
+    extensions: [ '.js', '.jsx' ]
+  }
 };

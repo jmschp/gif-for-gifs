@@ -1,10 +1,76 @@
 body {
-    font-family: Helvetica;
-  }
-  
-  #root {
-    height: 100vh;
+  font-family: Helvetica;
+}
+
+.app {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-areas: "left right";
+}
+
+.left-scene {
+  grid-area: left;
+  position: sticky;
+  > div {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    &:before {
+      content: "\f002";
+      position: absolute;
+      top: 30px;
+      left: 0px;
+      font-family: FontAwesome;
+      font-size: 2.6em;
+      opacity: 0.4;
+      z-index: 2;
+    }
   }
+  input {
+    align-self: flex-start;
+    padding: 30px;
+    margin-left: 50px;
+    margin-right: auto;
+    border: none;
+    font-size: 2.6em;
+    box-shadow: none;
+    margin-bottom: 2rem;
+    &:focus {
+      outline-width: 0;
+    }
+  }
+}
+
+.right-scene {
+  grid-area: right;
+  column-width: 10em;
+  img {
+    display: inline-block;
+    margin: 0.3em;
+    height: 10em;
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+  img:nth-child(2n) {
+    height: 12em;
+  }
+  img:nth-child(3n) {
+    height: 14em;
+  }
+  img:nth-child(4n) {
+    height: 16em;
+  }
+  img:nth-child(5n) {
+    height: 17em;
+  }
+  img:nth-child(6n) {
+    height: 20em;
+  }
+}
