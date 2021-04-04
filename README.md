@@ -1,15 +1,5 @@
-# 🚀 Welcome to your new awesome project!
+# 🚀 Welcome to Gif for Gifs project!
 
-This project has been created using **webpack-cli**, you can now run
+This is a personal project built on React, that uses the [GIPHY](https://giphy.com/) API to search for gifs while to type.
 
-```
-npm run build
-```
-
-or
-
-```
-yarn build
-```
-
-to bundle your application
+Clone the project and run `yarn install` and them `yarn serve` to lunch the local development sever.
