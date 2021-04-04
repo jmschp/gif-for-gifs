@@ -9,15 +9,16 @@ class Gif extends React.Component {
   }
 
   handleClick() {
-    const { gifId } = this.props;
     const { selectGif } = this.props;
-    selectGif(gifId);
+    const { gifUrl } = this.props;
+    const { gifWidth } = this.props;
+    const { gifHeight } = this.props;
+    selectGif(gifUrl, gifWidth, gifHeight);
   }
 
   render() {
-    const { gifId } = this.props;
-    const srcUrl = `https://media.giphy.com/media/${gifId}/giphy.gif`;
-    return <img src={srcUrl} alt="gif" onClick={this.handleClick} />;
+    const { gifUrl } = this.props;
+    return <img src={gifUrl} alt="gif" onClick={this.handleClick} />;
   }
 }
 

@@ -3,8 +3,8 @@ import Gif from "./gif";
 
 const GifList = (props) => {
   const { gifs } = props;
-  return gifs.map((gifId) => {
-    return <Gif gifId={gifId} key={gifId} selectGif={props.selectGif} />;
+  return gifs.map((gif) => {
+    return <Gif gifUrl={gif.url} gifWidth={gif.width} gifHeight={gif.height} key={gif.url} selectGif={props.selectGif} />;
   });
 };
 
